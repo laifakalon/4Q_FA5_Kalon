@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4QFA5-No.2</title>
+</head>
+<body>
+    <input type="text" id="cArea" placeholder="Write here">
+    <button onclick="addition()">Add</button>
+    <button onclick="removal()">Remove</button>
+    
+    <p id="d"></p>
+    
+    <script>
+        var cList = [];
+    
+        function addition() {
+
+            var contact = document.getElementById("cArea").value;
+            if (cList.length < 7) { cList.push(contact);} 
+            else { cList.push(contact);
+                cList.shift(); }
+
+            display();
+        }
+    
+        function removal() {
+
+                if (cList.length > 0) { cList.pop();
+
+                show();
+            }
+        }
+    
+        function show() { document.getElementById("d").innerText = cList.join(" "); }
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4QFA5-No.1</title>
+</head>
+
+<body>
+
+    <script>
+      
+        var inumber = prompt("Enter a number: ");
+        
+        while (!inumber || isNaN(inumber)) { alert("Invalid input. Please input another number."); inumber = prompt("Please enter a number: ");}
+        
+        let uinput = parseInt(inumber);
+        document.write("Number inputted: " + uinput + "<br/><br/>");
+        
+        if (uinput % 2 === 0) { 
+            for (var z = uinput; z > 0; z--) 
+            {
+                var x = "";
+                for (var y = 1; y <= z; y++) {
+                    x += z + " ";
+                }
+                
+                document.write(x + "<br/>");
+            }
+        } else { for (var z = uinput; z > 0; z--) 
+                {
+                var x = "";
+                for (var y = 1; y <= uinput; y++) {
+                    x += z + " ";
+                }
+
+                document.write(x + "<br/>");
+            }
+        }
+    </script>
+</body>
+</html>
